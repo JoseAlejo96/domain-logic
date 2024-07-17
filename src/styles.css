@@ -1,1 +1,130 @@
-/* You can add global styles to this file, and also import other style files */
+/* Custom Global Styles */
+
+:root {
+  --primary-color: #007bc4;
+  --primary-color-hover: #01446b;
+  --primary-color-active: #002b49;
+}
+
+/* --- Layout Styles --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Xunta Sans;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+app-root,
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+  vertical-align: center;
+}
+
+/* --- Utility Classes --- */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Padding and Margin Utility Classes */
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.m-1 {
+  margin: 0.25rem !important;
+}
+
+.m-2 {
+  margin: 0.5rem !important;
+}
+
+.m-3 {
+  margin: 1rem !important;
+}
+
+/* --- Responsive Styles --- */
+
+/* Small screens */
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .container-header {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+
+/* Medium screens and up */
+@media (min-width: 576px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .container-header {
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+
+/* Reduce movement in the interface */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
