@@ -1,1 +1,45 @@
-<p>formulario works!</p>
+<h3 class="mb-3">Introduzca un nombre de usuario</h3>
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="userName" class="col-form-label">Nombre: </label>
+        </div>
+        <div class="col-auto">
+            <input type="text" id="userName" class="form-control" formControlName="userName"
+                aria-describedby="passwordHelpInline" maxlength="20" />
+        </div>
+        <div class="col-auto">
+            <span id="userHelpInline" class="form-text">
+                Debe tener una longitud de entre 4 y 20 caracteres.
+            </span>
+        </div>
+    </div>
+
+    <button class="btn btn-primary mt-4" type="submit" [disabled]="isFormInvalid">
+        Buscar usuario
+    </button>
+    <button class="btn btn-secondary mt-4 clean-button" type="button" [disabled]="isFormInvalid" (click)="limpiar()">
+        Limpiar
+    </button>
+
+    @if(users.length > 0) {
+    <div class="mt-4">
+        <h3>Resultados de la búsqueda:</h3>
+        <ul class="list-group">
+            @for(user of users; track user) {
+            <li class="list-group-item">
+                <button class="btn user-link" (click)="guardarDatos(user)">
+                    <div class="button-text">
+                        <strong>Nombre de usuario:</strong> {{ user.login }} <br>
+                        <strong>ID:</strong> {{ user.id }}
+                    </div>
+                </button>
+            </li>
+            }
+        </ul>
+    </div>
+    } @else if (users.length == 0 && isFormSubmitted) {
+    <p class="no-results center mt-3">Sin resultados</p>
+    }
+</form>

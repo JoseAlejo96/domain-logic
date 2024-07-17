@@ -1,0 +1,14 @@
+.user-details-container {
+  position: relative;
+  padding: 20px;
+}
+
+.top-right {
+  position: absolute;
+  right: 15px;
+}
+
+.user-details .avatar {
+  width: 250px;
+  border-radius: 50%;
+}

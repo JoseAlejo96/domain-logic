@@ -7,7 +7,7 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'user-detail',
+    path: 'user/:login',
     loadComponent: () =>
       import('./features/user-detail/user-detail.component').then(
         (m) => m.UserDetailComponent

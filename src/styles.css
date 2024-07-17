@@ -2,8 +2,6 @@
 
 :root {
   --primary-color: #007bc4;
-  --primary-color-hover: #01446b;
-  --primary-color-active: #002b49;
 }
 
 /* --- Layout Styles --- */
@@ -11,7 +9,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Xunta Sans;
+  font-family: "Xunta Sans", sans-serif;
   font-size: 14px;
   box-sizing: border-box;
 }
@@ -39,9 +37,7 @@ main {
   flex: 1;
 }
 
-img,
-video,
-svg {
+img {
   height: auto;
   max-width: 100%;
   vertical-align: center;
@@ -53,7 +49,6 @@ svg {
   max-width: 1100px;
   margin: 0 auto;
 }
-
 
 .center {
   display: flex;
@@ -67,31 +62,6 @@ svg {
   align-items: center;
 }
 
-/* Padding and Margin Utility Classes */
-.p-1 {
-  padding: 0.25rem !important;
-}
-
-.p-2 {
-  padding: 0.5rem !important;
-}
-
-.p-3 {
-  padding: 1rem !important;
-}
-
-.m-1 {
-  margin: 0.25rem !important;
-}
-
-.m-2 {
-  margin: 0.5rem !important;
-}
-
-.m-3 {
-  margin: 1rem !important;
-}
-
 /* --- Responsive Styles --- */
 
 /* Small screens */
@@ -99,32 +69,11 @@ svg {
   .container {
     padding: 1rem;
   }
-
-  .container-header {
-    padding: 1rem 1rem 0 1rem;
-  }
 }
 
 /* Medium screens and up */
 @media (min-width: 576px) {
   .container {
     padding: 2rem;
-  }
-
-  .container-header {
-    padding: 2rem 2rem 0 2rem;
-  }
-}
-
-/* Reduce movement in the interface */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms;
-    scroll-behavior: auto !important;
-    transition: none;
   }
 }

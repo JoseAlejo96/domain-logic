@@ -1,0 +1,21 @@
+.clean-button {
+    margin-left: 15px;
+}
+
+.list-group-item {
+    max-width: 500px;
+    padding: 0;
+}
+.btn.user-link {
+    width: 100%;
+    border-radius: 0;
+}
+
+.button-text {
+    text-align: left;
+}
+
+.no-results {
+    font-size: 20px;
+    font-weight: 600;
+}
